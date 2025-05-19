@@ -3,7 +3,6 @@ package com.example.electricityBill.Controller;
 import com.example.electricityBill.Entity.Billing;
 import com.example.electricityBill.Entity.Consumer;
 import com.example.electricityBill.Service.BillingService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +14,6 @@ public class BillingController {
 
     private final BillingService billingService;
 
-    @Autowired
     public BillingController(BillingService billingService) {
         this.billingService = billingService;
     }

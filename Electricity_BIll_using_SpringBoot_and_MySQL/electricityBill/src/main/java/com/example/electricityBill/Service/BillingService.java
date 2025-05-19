@@ -4,7 +4,6 @@ import com.example.electricityBill.Entity.Billing;
 import com.example.electricityBill.Entity.Consumer;
 import com.example.electricityBill.Repository.BillingRepo;
 import com.example.electricityBill.Repository.ConsumerRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +14,6 @@ public class BillingService {
     private final ConsumerRepo consumerRepo;
     private final BillingRepo billingRepo;
 
-    @Autowired
     public BillingService(ConsumerRepo consumerRepo, BillingRepo billingRepo) {
         this.consumerRepo = consumerRepo;
         this.billingRepo = billingRepo;
