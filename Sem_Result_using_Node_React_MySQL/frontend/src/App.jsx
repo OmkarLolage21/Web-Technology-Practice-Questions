@@ -19,7 +19,7 @@ function App() {
       const updated = [...form[type]];
       updated[index] = parseInt(value) || 0;
       setForm({ ...form, [type]: updated });
-    }
+    }s
   };
 
   const handleSubmit = async (e) => {
