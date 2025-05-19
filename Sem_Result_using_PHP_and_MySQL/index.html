@@ -11,8 +11,9 @@
   </head>
   <body class="p-4">
     <div class="container">
-      <h3 class="text-center mb-4">VIT Sem result generation</h3>
-      <form id="resultForm">
+      <h3 class="text-center mb-4">VIT Sem Result Generation</h3>
+
+      <form action="backend.php" method="POST">
         <input
           class="form-control mb-3"
           placeholder="Student name"
@@ -46,31 +47,6 @@
           Generate Result
         </button>
       </form>
-
-      <div id="resultMsg" class="mt-4"></div>
     </div>
-
-    <script>
-      document
-        .getElementById("resultForm")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-
-          const formData = new FormData(this);
-          const plainData = {};
-          formData.forEach((value, key) => {
-            plainData[key] = value;
-          });
-
-          const res = await fetch("backend.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(plainData),
-          });
-
-          const msg = await res.text();
-          document.getElementById("resultMsg").innerHTML = msg;
-        });
-    </script>
   </body>
 </html>
